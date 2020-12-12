@@ -1,0 +1,35 @@
+
+body{
+    text-align: center;
+}
+
+h1 img{
+    width: 489px;
+    margin: 20px;
+}
+
+
+input{
+    display: block;
+    border: 1px solid #000000;
+    background: #fdfdfd;
+    font-size: 24px;
+    padding: 10px;
+    margin: 10px;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+button{
+    border: 1px solid #000000;
+    background: #d8d8d8;
+    font-size: 24px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.result {
+    padding: 10px;
+    border: 1px solid #d8d8d8;
+    background: #fdfdfd;
+}
