@@ -1,10 +1,19 @@
 <%- include('header') %>
 
-<form method="GET" action="/cotacao">
-    <input name="quote" placeholder="Cotação do Dólar" />
-    <input name="amount" placeholder="Quantidade de Dolares" />
-    <button>Converter</button>
-</form>
+    <div class="margin-20">
+
+        <button class="btn red font-white margin-r-20">Dólar Canadense</button>
+        <button class="btn margin-r-20">Dólar Australiano</button>
+        <button class="btn margin-r-20">Dólar Australiano</button>
+        <button class="btn margin-r-20">Dólar Australiano</button>
+        <button class="btn margin-r-20">Dólar Australiano</button>
+    </div>
+
+    <form class="margin-40" method="GET" action="/cotacao">
+        <input name="quote" placeholder="Cotação do Dólar" />
+        <input name="amount" placeholder="Quantidade de Dolares" />
+        <button>Converter</button>
+    </form>
 
 
-<%- include('footer') %>
+    <%- include('footer') %>

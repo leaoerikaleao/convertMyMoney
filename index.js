@@ -1,6 +1,10 @@
 const express = require('express')
 const app = express()
 
+const axios = require('axios')
+const cors = require('cors')
+app.use(cors())
+
 const path = require('path')
 const convert = require('./lib/convert')
 
@@ -8,8 +12,21 @@ app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname, 'views'))
 app.use(express.static(path.join(__dirname, 'public')))
 
-app.get('/', (req, res) => {
-    res.render('home')
+app.get('/', async (req, res) => {
+
+    try {
+        var currency = await axios('https://economia.awesomeapi.com.br/json/all')
+        const allCurrency = (currency.data)
+        //console.log(allCurrency)
+
+        await allCurrency.map((item) => {
+            console.log(item.code)
+        })
+        res.render('home', { currency })
+
+    } catch (err) {
+        console.log(err)
+    }
 })
 
 app.get('/cotacao', (req, res) => {
