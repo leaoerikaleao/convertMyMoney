@@ -68,10 +68,6 @@ footer a, footer a:hover, footer a:focus{
     color: #3d444b
 }
 
-.margin-r-20{
-    margin-right: 20px;
-}
-
 .result {
     padding: 10px;
     font-family: 'Titillium Web', sans-serif;
@@ -86,6 +82,7 @@ footer a, footer a:hover, footer a:focus{
 @media screen and (min-width: 400px) {
     h1 img{
         width: 380px;
+        margin-top: 50px;
     }
     
     input, select, button, .result {
@@ -98,7 +95,7 @@ footer a, footer a:hover, footer a:focus{
 @media screen and (min-width: 800px) {
     h1 img{
         width: 340px;
-        margin-top: 20px;
+        margin-top: 70px;
     }
     
     input, select, button, .result {
