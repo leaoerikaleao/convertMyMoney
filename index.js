@@ -15,37 +15,44 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.get('/', async (req, res) => {
 
     try {
-        var currency = await axios('https://economia.awesomeapi.com.br/json/all')
+        var currency = await axios.get('https://economia.awesomeapi.com.br/json/all')
         const allCurrency = (currency.data)
-        //console.log(allCurrency)
-
-        await allCurrency.map((item) => {
-            console.log(item.code)
-        })
-        res.render('home', { currency })
+        res.render('home', { allCurrency })
 
     } catch (err) {
         console.log(err)
     }
 })
 
-app.get('/cotacao', (req, res) => {
-    const { quote, amount } = req.query
+app.get('/cotacao', async (req, res) => {
+    try {
+        const { currencys, amount } = req.query
 
-    if (quote && amount) {
-        const conversion = convert.convert(quote, amount)
-        res.render('quote', {
-            error: false,
-            quote: convert.toMoney(quote),
-            amount: convert.toMoney(amount),
-            conversion: convert.toMoney(conversion)
+        const getCurrency = await axios.get('https://economia.awesomeapi.com.br/' + currencys)
+        const currency = getCurrency.data
+
+        Object.keys(currency).map((item) => {
+            quote = (currency[item].ask)
+            currencyName = (currency[item].name)
         })
-    } else {
-        res.render('quote', {
-            error: 'Valores Inválidos'
-        })
+
+        if (quote && amount) {
+            const conversion = convert.convert(quote, amount)
+            res.render('quote', {
+                error: false,
+                quote: convert.toMoney(quote),
+                amount: convert.toMoney(amount),
+                conversion: convert.toMoney(conversion)
+            })
+        } else {
+            res.render('quote', {
+                error: 'Valor Inválido'
+            })
+        }
+
+    } catch (err) {
+        console.log(err)
     }
-
 })
 
 

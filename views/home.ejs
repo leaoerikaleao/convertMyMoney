@@ -1,18 +1,18 @@
 <%- include('header') %>
 
-    <div class="margin-20">
 
-        <button class="btn red font-white margin-r-20">Dólar Canadense</button>
-        <button class="btn margin-r-20">Dólar Australiano</button>
-        <button class="btn margin-r-20">Dólar Australiano</button>
-        <button class="btn margin-r-20">Dólar Australiano</button>
-        <button class="btn margin-r-20">Dólar Australiano</button>
-    </div>
+    <form method="GET" action="/cotacao">
+        <select name="currencys">
+            <% Object.keys(allCurrency).map((item)=> { %>
+                <option value=<%=item %>>
+                    <%= allCurrency[item].name %>
+                </option>
+                <% })%>
+        </select>
 
-    <form class="margin-40" method="GET" action="/cotacao">
-        <input name="quote" placeholder="Cotação do Dólar" />
-        <input name="amount" placeholder="Quantidade de Dolares" />
-        <button>Converter</button>
+        <input name="amount" placeholder="Quantidade que deseja converter" />
+
+        <button>CONVERTER</button>
     </form>
 
 

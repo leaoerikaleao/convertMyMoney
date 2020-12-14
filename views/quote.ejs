@@ -1,12 +1,15 @@
 <%- include('header') %>
 
-<div class="result">
-    <% if (error) { %>
-    <%= error %>
-    <% } else { %>
-    <%= amount %>
-    dólares na cotação <%= quote %> é igual a <%= conversion %> reais
-    <% } %>
-</div>
+    <div class="result">
+        <% if (error) { %>
+            <%= error %>
+        <% } else { %>
+            <p>Moeda: <%= currencyName %></p>
+            <p> Cotação: <%= quote  %></p>
+            <p>Quantidade para converter para reais: <%= amount %></p>
+            <p class="bold">Total convertido em reais: R$ <%= conversion %> </p>
+        <% } %>
+        <a class="btn" href="/">VOLTAR</a>
+    </div>
 
-<%- include('footer') %>
+    <%- include('footer') %>

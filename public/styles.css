@@ -3,51 +3,107 @@ body{
     text-align: center;
 }
 
-h1 img{
-    width: 300px;
-    margin: 20px;
+input, select{
+    display: block;
+    border: 2px solid #394148;
+    background: #fdfdfd;
+    padding: 5px;
+    margin: 10px;
+    margin-left: auto;
+    margin-right: auto; 
+    font-family: 'Titillium Web', sans-serif;
+    
 }
 
+select:focus, input:focus{
+    border: #43947a 2px solid;
+    background-color: #edf8f4;
+    transition: all .3s ease-in-out;
+    opacity: 1;
+}
 
-input{
-    display: block;
-    border: 1px solid #000000;
-    background: #fdfdfd;
-    font-size: 24px;
+button, .btn{
+    border-bottom: 3px solid #2a5d4c;
+    border-top:none;
+    border-left: none;
+    border-right: none;
+    background:  #43947a;
+    color:white;
+    font-weight: bold;
     padding: 10px;
     margin: 10px;
     margin-left: auto;
     margin-right: auto; 
+    width: 100%;
+    display: block;
+    font-family: 'Titillium Web', sans-serif;
 }
-
-button{
-    border: 1px solid #000000;
-    background: #d8d8d8;
+button:hover, .btn:hover{
+    border-bottom: 3px solid  #43947a ;
+    border-top:none;
+    border-left: none;
+    border-right: none;
+    background: #2a5d4c ;
+    transition: all .3s ease-in-out;
+    opacity: 1;
+    cursor: pointer;
+}
+a, a:hover{
+    text-decoration: none;
     font-family: 'Titillium Web', sans-serif;
 }
 
-.btn{
-    font-size: 16px;
-    padding: 10px;
-    margin-top: 20px;
+footer{
+    color: #3d444b;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 15px;
+    bottom: 0;
+    width: 100%;
+    position: fixed;
+    bottom:0;
+    margin: 0;
 }
+
+footer a, footer a:hover{
+    color: #3d444b'
+}
+
 .margin-r-20{
     margin-right: 20px;
 }
 
-.margin-40{
-    margin: 40px;
-}
-
 .result {
     padding: 10px;
-    border: 1px solid #d8d8d8;
-    background: #fdfdfd;
+    font-family: 'Titillium Web', sans-serif;
+    margin-left: auto;
+    margin-right: auto; 
 }
 
-.red{
-    background-color: #C40000;
+.bold{
+    font-weight: bold;
 }
-.font-white{
-    color: #fff;
+
+@media screen and (min-width: 400px) {
+    h1 img{
+        width: 380px;
+    }
+    
+    input, select, button, .result {
+        width: 85%;
+        font-size: 16px;
+
+    }
+  }
+  
+@media screen and (min-width: 800px) {
+    h1 img{
+        width: 340px;
+        margin-top: 20px;
+    }
+    
+    input, select, button, .result {
+        width: 40%;
+        font-size: 18px;
+        margin-top: 20px;
+    }
 }
