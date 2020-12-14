@@ -64,8 +64,8 @@ footer{
     margin: 0;
 }
 
-footer a, footer a:hover{
-    color: #3d444b'
+footer a, footer a:hover, footer a:focus{
+    color: #3d444b
 }
 
 .margin-r-20{
