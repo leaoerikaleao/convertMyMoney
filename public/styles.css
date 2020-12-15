@@ -97,7 +97,7 @@ footer a, footer a:hover, footer a:focus{
 @media screen and (min-device-width: 481px) and (max-device-width: 768px) { 
     h1 img{
         width: 380px;
-        margin-top: 50px;
+        margin-top: 30px;
     }
     
     input, select, button, .result {
