@@ -79,7 +79,22 @@ footer a, footer a:hover, footer a:focus{
     font-weight: bold;
 }
 
-@media screen and (min-width: 400px) {
+
+@media screen and (min-width: 769px) {
+    h1 img{
+        width: 380px;
+        margin-top: 50px;
+    }
+    
+    input, select, button, .result {
+        width: 45%;
+        font-size: 16px;
+
+    }
+}
+
+
+@media screen and (min-device-width: 481px) and (max-device-width: 768px) { 
     h1 img{
         width: 380px;
         margin-top: 50px;
@@ -90,17 +105,22 @@ footer a, footer a:hover, footer a:focus{
         font-size: 16px;
 
     }
-  }
-  
-@media screen and (min-width: 800px) {
+}
+
+@media only screen and (max-device-width: 480px) {
     h1 img{
-        width: 340px;
-        margin-top: 70px;
+        width: 780px;
+        margin-top: 350px;
     }
     
     input, select, button, .result {
-        width: 40%;
-        font-size: 18px;
-        margin-top: 20px;
+        width: 85%;
+        font-size: 48px;
+    }
+
+    input, select {
+        margin: 30px;
+        margin-left: auto;
+        margin-right: auto; 
     }
 }

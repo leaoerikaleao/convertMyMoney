@@ -1,6 +1,5 @@
 <%- include('header') %>
 
-
     <form method="GET" action="/cotacao">
         <select name="currencys">
             <% Object.keys(allCurrency).map((item)=> { %>
@@ -14,6 +13,5 @@
 
         <button>CONVERTER</button>
     </form>
-
 
     <%- include('footer') %>
