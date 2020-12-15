@@ -110,7 +110,7 @@ footer a, footer a:hover, footer a:focus{
 @media only screen and (max-device-width: 480px) {
     h1 img{
         width: 780px;
-        margin-top: 30px;
+        margin-top: 50px;
     }
     
     input, select, button, .result {
@@ -119,7 +119,7 @@ footer a, footer a:hover, footer a:focus{
     }
 
     input, select {
-        margin: 30px;
+        margin: 20px;
         margin-left: auto;
         margin-right: auto; 
     }
